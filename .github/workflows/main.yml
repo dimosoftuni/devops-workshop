@@ -43,4 +43,4 @@ jobs:
       - name: Build
         run: docker build -t dimosoftuni/frontend -f ./frontend/Dockerfile .
       - name: Push to Repository
-        run: dcoker push dimosoftuni/frontend
+        run: docker push dimosoftuni/frontend
