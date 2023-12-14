@@ -43,6 +43,6 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
-          context: ./fronted
+          context: ./frontend
           push: true
           tags: dimosoftuni/frontend:latest
