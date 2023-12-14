@@ -40,9 +40,7 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
-      - name: Build and push
-        uses: docker/build-push-action@v5
-        with:
-          context: ./frontend
-          push: true
-          tags: dimosoftuni/frontend:latest
+      - name: Build
+        run: docker build -t dimosoftuni/frontend .
+      - name: Push to Repository
+        run: dcoker push dimosoftuni/frontend
